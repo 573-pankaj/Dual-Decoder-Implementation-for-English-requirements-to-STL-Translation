@@ -1,5 +1,13 @@
 # English-to-STL Dual Decoder Transformer
 
+## 📝 Introduction: English → STL Translation
+
+Signal Temporal Logic (STL) is widely used in robotics, autonomous systems, and cyber-physical systems to formally specify behaviors over time. Manually writing STL formulas is difficult, requires expertise, and is error‑prone.
+
+This project provides an **automatic translation system** that converts **natural English instructions** into precise **STL formulas** using a specially designed **Dual‑Decoder Transformer model**. The model separates semantic meaning and syntactic structure, ensuring accurate and grammatically valid STL outputs.
+
+Below is the full architecture, file structure, usage instructions, and examples.
+
 This repository implements an **English → STL (Signal Temporal Logic)** translation system using a **Dual-Decoder Transformer** architecture. It contains all modules required for preprocessing, training, validation, testing, beam search decoding, and evaluation.
 
 The model architecture, training flow, and performance results are summarized below along with instructions on how to run the code.
@@ -8,7 +16,7 @@ The model architecture, training flow, and performance results are summarized be
 
 ## 📌 Architecture Overview
 
-![Architecture](dig.png)
+![Architecture](documents/dig.png)
 
 **Key idea:** The model uses a shared encoder and two decoders:
 
@@ -134,7 +142,7 @@ python transformer/test/predict_greedy.py
 
 ## 📊 Experimental Results
 
-![Results](results.jpg)
+![Results](documents/results.jpg)
 
 **Summary:**
 
