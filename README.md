@@ -125,19 +125,6 @@ python transformer_train.py
 ```
 python transformer_test.py
 ```
-
-### **4. Run Beam Search Prediction**
-
-```
-python transformer/ test/ transformer_predict_beam.py
-```
-
-### **5. Greedy Prediction**
-
-```
-python transformer/test/predict_greedy.py
-```
-
 ---
 
 ## 📊 Experimental Results
