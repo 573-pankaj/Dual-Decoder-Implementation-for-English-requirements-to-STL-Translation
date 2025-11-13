@@ -1,5 +1,5 @@
-# Dual-Decoder-Implementation-for-English-requirements-to-STL-Translation
-CS787 GenAI Project: /
+# CS787 GenAI Project on :  Dual-Decoder-Implementation-for-English-requirements-to-STL-Translation
+
 System requirements are usually written in English because it is easy for humans to read and understand
 stand. However, computers and verification tools need these requirements in a formal and precise way
 to check if a system behaves correctly. Signal Temporal Logic (STL) is one such formal language that
