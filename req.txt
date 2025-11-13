@@ -19,3 +19,4 @@ Software Packages:
 • d2l
 • tokenizers
  matplotlib
+pandas
