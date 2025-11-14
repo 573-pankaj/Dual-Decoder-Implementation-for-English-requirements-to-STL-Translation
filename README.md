@@ -111,7 +111,7 @@ NLP/
 ### **1. Install Requirements**
 
 ```
-pip install -r requirements.txt
+pip install -r REQUIREMENTS.txt
 ```
 
 ### **2. Train the Model**
