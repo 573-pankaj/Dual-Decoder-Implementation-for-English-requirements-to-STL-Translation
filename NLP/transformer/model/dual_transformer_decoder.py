@@ -106,10 +106,8 @@ class DualDecoderBlock(nn.Module):
         Z_sem = self.addnorm_sem_3(Y_sem, self.sem_ffn(Y_sem))
 
         # -------- Gated Fusion --------
-        # gate = torch.sigmoid(self.fuse_gate(torch.cat((Z_syn, Z_sem), dim=-1)))
-        # fused = gate * Z_syn + (1.0 - gate) * Z_sem
-        Z_sem = torch.zeros_like(Z_syn)
-        fused = Z_syn
+        gate = torch.sigmoid(self.fuse_gate(torch.cat((Z_syn, Z_sem), dim=-1)))
+        fused = gate * Z_syn + (1.0 - gate) * Z_sem
 
         # Diagnostic: log gate stats occasionally
         # if not self.training and torch.rand(1).item() < 0.1:  # adjust as needed

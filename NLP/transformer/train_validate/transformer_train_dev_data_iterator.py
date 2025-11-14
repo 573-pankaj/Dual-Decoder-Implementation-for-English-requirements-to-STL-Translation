@@ -10,8 +10,8 @@ import math
 class TransformerTrainDevDataIterator:
     def __init__(self, seed):
         preprocess_info_dict = self.read_file()
-        self.train_dev_eng_list = preprocess_info_dict['train_dev_eng_list'][:100]
-        self.train_dev_stl_list = preprocess_info_dict['train_dev_stl_list'][:100]
+        self.train_dev_eng_list = preprocess_info_dict['train_dev_eng_list']
+        self.train_dev_stl_list = preprocess_info_dict['train_dev_stl_list']
         self.eng_tokenizer = preprocess_info_dict['eng_tokenizer']
         self.stl_tokenizer = preprocess_info_dict['stl_tokenizer']
         self.max_length = preprocess_info_dict['max_length']
@@ -81,51 +81,3 @@ class TransformerTrainDevDataIterator:
         valid_len = (array != tokenizer.encode('<pad>').ids[0]).type(torch.int32).sum(1)
 
         return array, valid_len
-
-
-# seed = 100
-# data = TransformerTrainDevDataIterator(seed)
-# for X, X_valid_len, Y, Y_valid_len in data.train_data_iter:
-#     print('X:', X.type(torch.int32))
-#     print('valid lengths for X:', X_valid_len)
-#     print('X_valid_len.shape:', X_valid_len.shape)
-#     print('Y:', Y.type(torch.int32))
-#     print('valid lengths for Y:', Y_valid_len)
-#     #print(X.shape)
-#     break
-# print()
-#
-# print('first load:')
-# f = open(paths.transformer_record_path + str(seed) + '/data_iter_dict', 'rb')
-# data_iter_dict = pickle.load(f)
-# f.close()
-# train_data_iter = data_iter_dict['train']
-# state = torch.get_rng_state()
-# # print(state)
-# for i in range(2):
-#     for X, X_valid_len, Y, Y_valid_len in train_data_iter:
-#         print('X:', X.type(torch.int32))
-#         # print('valid lengths for X:', X_valid_len)
-#         # print('X_valid_len.shape:', X_valid_len.shape)
-#         # print('Y:', Y.type(torch.int32))
-#         # print('Y[0].size:', Y[0].size(0))
-#         # print('valid lengths for Y:', Y_valid_len)
-#         #print(X.shape)
-#         break
-# print()
-# print('second load:')
-# torch.set_rng_state(state)
-# f = open(paths.transformer_record_path + str(seed) + '/data_iter_dict', 'rb')
-# data_iter_dict = pickle.load(f)
-# f.close()
-# train_data_iter = data_iter_dict['train']
-# for i in range(2):
-#     for X, X_valid_len, Y, Y_valid_len in train_data_iter:
-#         print('X:', X.type(torch.int32))
-#         # print('valid lengths for X:', X_valid_len)
-#         # print('X_valid_len.shape:', X_valid_len.shape)
-#         # print('Y:', Y.type(torch.int32))
-#         # print('Y[0].size:', Y[0].size(0))
-#         # print('valid lengths for Y:', Y_valid_len)
-#         #print(X.shape)
-#         break

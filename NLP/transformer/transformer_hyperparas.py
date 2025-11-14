@@ -8,7 +8,7 @@ num_heads = 8
 dropout_rate = 0.1
 
 # train & validate
-max_epochs = 2
+max_epochs = 40
 batch_size = 64
 warmup_steps = 4000
 factor = 2

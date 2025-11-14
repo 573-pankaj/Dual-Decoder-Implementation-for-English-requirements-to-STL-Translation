@@ -1,2 +1,3 @@
 NLP/transformer/record/*
 **/__pycache__/
+**/.ipynb_checkpoints/
