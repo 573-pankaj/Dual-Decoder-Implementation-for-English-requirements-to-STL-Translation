@@ -42,16 +42,12 @@ NLP/
 │   │   ├── add_norm.py
 │   │   ├── ffn.py
 │   │   ├── transformer_encoder.py
-│   │   ├── transformer_decoder.py
 │   │   ├── dual_transformer_decoder.py
 │   ├── test/
 │   │   ├── predict_greedy.py
 │   │   ├── transformer_predict_beam.py
 │   ├── train_validate/
-│   │   ├── paths.py
-│   │   ├── transformer_hyperparas.py
 │   │   ├── transformer_train_dev_data_iterator.py
-│   │   ├── transformer_trainer_validator.py
 ├── data_set/
 ├── subword_preprocessing.py
 ├── transformer_train.py
